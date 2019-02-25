@@ -58,7 +58,7 @@ namespace DUSCoreTraining
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("hannes", "{controller=Hannes}/{action=Index}/{id?}");
             }
                 );
             app.ApplicationServices.GetService<Dumm>().MyProperty = 1234;

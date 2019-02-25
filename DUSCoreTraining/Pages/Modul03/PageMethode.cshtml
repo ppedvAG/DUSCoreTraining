@@ -1,0 +1,26 @@
+﻿@page "{handler?}/{id?}"
+@model DUSCoreTraining.Pages.Modul03.PageMethodeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PageMethode</title>
+</head>
+<body>
+    <a href="~/Modul03/PageMethode/?handler=drucken&id=12">drucken</a><br />  page <br />
+    <a href="~/Modul03/PageMethode/drucken?id=12">drucken</a><br />  page "{handler?} "<br />
+    <a href="~/Modul03/PageMethode/drucken/12">drucken</a> page "{handler?}/{id?}"<br />
+
+    <br />
+    <form method="post">
+        <input name="id" type="text" />
+        <button>post </button>
+
+    </form>
+</body>
+</html>

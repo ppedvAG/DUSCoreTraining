@@ -12,12 +12,7 @@ namespace DUSCoreTraining.Pages.Modul03
         public void OnGet()
         {
             var x = Request.Query["id"];
-
-
-
-
         }
-      
         public void OnGetDrucken([FromRoute] string id)
         {
             //[FromQuery] string id

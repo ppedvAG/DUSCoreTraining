@@ -1,6 +1,20 @@
-﻿@page
+﻿@page "/hannes2"
+@using System.Globalization
+@using DUSCoreTraining.Services
+@inject Dumm d
 @{
     Layout = null;
+    var name = "Preishuber-Pflügl";
+    var html = "<b>Hannes</b>";
+}
+@functions 
+{
+    public Dumm MyProperty { get; set; }
+   
+    public void OnGet()
+    {
+
+    }
 }
 
 <!DOCTYPE html>
@@ -11,7 +25,35 @@
     <title>RazorPage</title>
 </head>
 <body>
-    <h1>@DateTime.Now</h1> 
+    <h1>@DateTime.Now</h1>
+    hannesp@ppedv.de
+    url als Status
+
+    /kunden/index
+    /kunden/edit/123
+    /rechnung/Artikel/edit/123
+    /rechnung/artikel/index?t=100&s=A
+    <hr />
+    @name
+    @(name + "test")<br />
+    <p>@name@name</p><br />
+   
+    @Html.Raw(html)
+
+    @if (true)
+    {
+        <br /><text>Hannes</text><br>
+        name = "Franz";
+
+    }
+    hannes
+    @for (int i = 0; i < 12; i++)
+    {
+        @DateTime.Now.AddMonths(i).ToString("MMMM",new CultureInfo("de-at"));
+        <br />
+    }
+    <br />
+    @d.MyProperty
 
 </body>
 </html>

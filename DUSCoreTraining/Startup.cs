@@ -61,7 +61,7 @@ namespace DUSCoreTraining
                 routes.MapRoute("hannes", "{controller=Hannes}/{action=Index}/{id?}");
             }
                 );
-            app.ApplicationServices.GetService<Dumm>().MyProperty = 1234;
+            app.ApplicationServices.GetService<Dumm>().MyProperty = 0;
          
         }
     }

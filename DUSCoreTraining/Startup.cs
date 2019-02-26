@@ -32,9 +32,11 @@ namespace DUSCoreTraining
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSession(options => options.Cookie.HttpOnly = true);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSingleton<Dumm>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,13 +57,14 @@ namespace DUSCoreTraining
             app.UseHttpsRedirection();
            app.UseStaticFiles();
             app.UseCookiePolicy();
-
+         app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute("hannes", "{controller=Hannes}/{action=Index}/{id?}");
             }
                 );
             app.ApplicationServices.GetService<Dumm>().MyProperty = 0;
+   
          
         }
     }

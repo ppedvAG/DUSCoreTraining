@@ -33,8 +33,9 @@ namespace DUSCoreTraining
             });
 
             services.AddSession(options => options.Cookie.HttpOnly = true);
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+        
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddSessionStateTempDataProvider(); ;
             services.AddSingleton<Dumm>();
            
         }

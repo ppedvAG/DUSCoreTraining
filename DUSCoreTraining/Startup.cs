@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DUSCoreTraining.Pages.Modul05;
 using DUSCoreTraining.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,22 +34,22 @@ namespace DUSCoreTraining
             });
 
             services.AddSession(options => options.Cookie.HttpOnly = true);
-        
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddSessionStateTempDataProvider(); ;
             services.AddSingleton<Dumm>();
             services.AddResponseCaching();
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             AppDomain.CurrentDomain.SetData("wwwpath", env.ContentRootPath);
-          
+
             if (env.IsDevelopment())
             {
-                
+
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -59,18 +60,26 @@ namespace DUSCoreTraining
             }
 
             app.UseHttpsRedirection();
-           app.UseStaticFiles();
+            app.UseStaticFiles();
             app.UseCookiePolicy();
-         app.UseSession();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute("hannes", "{controller=Hannes}/{action=Index}/{id?}");
             }
                 );
+
+
+            app.MapWhen(context => context.Request.Path.ToString().Contains("imageloader.ashx"),
+                appBranch =>
+                {
+                    appBranch.UseImageLoader();
+                });
+
             app.ApplicationServices.GetService<Dumm>().MyProperty = 0;
 
             app.UseResponseCaching();
         }
-        
+
     }
 }

@@ -1,0 +1,6 @@
+﻿Rechung, Postionen Klasse
+ModelRechnung DB Context
+Paket Manager Konsole
+add-migrations
+ update-database 
+

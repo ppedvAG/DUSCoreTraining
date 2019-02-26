@@ -16,6 +16,14 @@
 
   <ItemGroup>
     <Folder Include="NewFolder\" />
+    <Folder Include="Pages\Modul05\" />
+    <Folder Include="Pages\Modul06\" />
+    <Folder Include="Pages\Modul07\" />
+    <Folder Include="Pages\Modul08\" />
+    <Folder Include="Pages\Modul09\" />
+    <Folder Include="Pages\Modul10\" />
+    <Folder Include="Pages\Modul11\" />
+    <Folder Include="Pages\Modul12\" />
   </ItemGroup>
 
 </Project>

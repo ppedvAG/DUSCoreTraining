@@ -1,0 +1,27 @@
+﻿@page "{handler?}"
+@model DUSCoreTraining.Pages.Modul03.calcModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>calc</title>
+</head>
+<body>
+    <form method="get">
+        <input name="eins" />
+        <input name="zwei" />
+        <button asp-page-handler="Add">+</button>
+        <button asp-page-handler="Sub">-</button>
+
+    </form>
+    Ergebnis:@Model.Ergebnis
+
+
+  
+</body>
+</html>

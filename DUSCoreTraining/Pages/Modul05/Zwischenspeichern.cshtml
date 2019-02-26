@@ -1,0 +1,12 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul05.ZwischenspeichernModel
+@{
+    ViewData["Title"] = "Zwischenspeichern";
+}
+
+<h1>Zwischenspeichern</h1>
+<cache enabled="true" expires-after="@new TimeSpan(0,0,30)"  >
+    @DateTime.Now
+
+</cache>
+

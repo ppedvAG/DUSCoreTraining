@@ -37,6 +37,7 @@ namespace DUSCoreTraining
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddSessionStateTempDataProvider(); ;
             services.AddSingleton<Dumm>();
+            services.AddResponseCaching();
            
         }
 
@@ -65,8 +66,9 @@ namespace DUSCoreTraining
             }
                 );
             app.ApplicationServices.GetService<Dumm>().MyProperty = 0;
-   
-         
+
+            app.UseResponseCaching();
         }
+        
     }
 }

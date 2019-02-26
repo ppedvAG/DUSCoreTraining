@@ -11,7 +11,7 @@ namespace DUSCoreTraining.Pages.Modul05
     {
         public void OnGet()
         {
-            HttpContext.Response.ContentType = "application/msexcel";
+            HttpContext.Response.ContentType = "application/vnd.ms-excel";
         }
     }
 }

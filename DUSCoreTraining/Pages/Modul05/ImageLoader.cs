@@ -15,8 +15,10 @@ namespace DUSCoreTraining.Pages.Modul05
         } 
         public async Task Invoke(HttpContext context)
         {
-            var img = context.Request.Query["img"];
-           var pfad = Path.Combine(AppDomain.CurrentDomain.GetData("wwwpath").ToString(), img);
+            var img = context.Request.Query["img"][0];
+           var pfad = Path.Combine(AppDomain.CurrentDomain.GetData("wwwpath").ToString(),
+               "wwwroot","app_data",
+               img);
             await context.Response.SendFileAsync(pfad);
         }
     }

@@ -70,7 +70,7 @@ namespace DUSCoreTraining
                 );
 
 
-            app.MapWhen(context => context.Request.Path.ToString().Contains("imageloader.ashx"),
+            app.MapWhen(context => context.Request.Path.ToString().Contains("Imageloader.ashx"),
                 appBranch =>
                 {
                     appBranch.UseImageLoader();

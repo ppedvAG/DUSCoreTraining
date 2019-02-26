@@ -14,8 +14,8 @@ namespace DUSCoreTraining.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //  optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;AttachDbFilename=c:\\aspnetcore\\training\\DUSCoreTraining\\DUSCoreTraining\\wwwroot\\app_data\\rechnung3.mdf;database=rechnung3;Integrated Security=True; MultipleActiveResultSets=True");
-            optionsBuilder.UseSqlServer(ConfigurationExtensions.GetConnectionString()
+             optionsBuilder.UseSqlServer("Data Source=(localdb)\\mssqllocaldb;AttachDbFilename=c:\\aspnetcore\\training\\DUSCoreTraining\\DUSCoreTraining\\wwwroot\\app_data\\rechnung3.mdf;database=rechnung3;Integrated Security=True; MultipleActiveResultSets=True");
+            //optionsBuilder.UseSqlServer(new ConfigurationBuilder().GetConnectionString("Rechnung"));
             base.OnConfiguring(optionsBuilder);
         }
     }

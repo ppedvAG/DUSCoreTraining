@@ -42,7 +42,7 @@ namespace DUSCoreTraining
             services.AddSingleton<Dumm>();
             services.AddResponseCaching();
             services.AddDbContext<ModelRechnung>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("Rechnung")));
+                 options.UseSqlServer(Configuration.GetConnectionString("Rechnung")));
 
 
         }

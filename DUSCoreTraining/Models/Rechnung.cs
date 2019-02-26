@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DUSCoreTraining.Models
 {
+
     public class Rechnung
     {
         public Rechnung()

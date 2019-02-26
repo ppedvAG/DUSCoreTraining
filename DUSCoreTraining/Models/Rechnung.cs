@@ -8,6 +8,10 @@ namespace DUSCoreTraining.Models
 {
     public class Rechnung
     {
+        public Rechnung()
+        {
+            Postionen = new List<Positionen>();
+        }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public DateTime Datum { get; set; }

@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="NewFolder\" />
-    <Folder Include="Pages\Modul07\" />
     <Folder Include="Pages\Modul08\" />
     <Folder Include="Pages\Modul09\" />
     <Folder Include="Pages\Modul10\" />

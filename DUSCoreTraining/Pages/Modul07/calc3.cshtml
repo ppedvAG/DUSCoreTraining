@@ -1,0 +1,17 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul07.calc3Model
+@{
+    ViewData["Title"] = "calc3";
+}
+
+<h1>calc3</h1>
+<form method="post">
+    <input asp-for="eins" />
+    <input asp-for="zwei" />
+    <button asp-page-handler="Add">+</button>
+    <button asp-page-handler="Sub">-</button>
+
+</form>
+    Ergebnis:@Model.Ergebnis
+
+

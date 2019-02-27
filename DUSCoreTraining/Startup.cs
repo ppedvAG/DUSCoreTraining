@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DUSCoreTraining.Models;
 using DUSCoreTraining.Pages.Modul05;
+using DUSCoreTraining.Pages.Modul10;
 using DUSCoreTraining.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -43,7 +44,7 @@ namespace DUSCoreTraining
             services.AddResponseCaching();
             services.AddDbContext<ModelRechnung>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("Rechnung")));
-
+            services.AddSignalR();
 
         }
 
@@ -84,6 +85,8 @@ namespace DUSCoreTraining
             app.ApplicationServices.GetService<Dumm>().MyProperty = 0;
 
             app.UseResponseCaching();
+            app.UseSignalR(routes =>
+            routes.MapHub<DemoHub>("/DemoHub"));
         }
 
     }

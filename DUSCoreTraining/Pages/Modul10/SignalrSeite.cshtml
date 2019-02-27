@@ -1,0 +1,32 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul10.SignalrSeiteModel
+@{
+    ViewData["Title"] = "SignalrSeite";
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/signalr.js"></script>
+<h1>SignalrSeite</h1>
+<input id="message" />
+<a href="#" onclick="sendMessage();">Senden</a>
+<div id="ausgabe"></div>
+<script>
+
+        var connection = new signalR.HubConnectionBuilder().withUrl("/DemoHub").build();
+        connection.on("clientListener", function (message) {
+            $('#ausgabe').text(message);
+        });
+        connection.start().catch(
+            function (err) { console.warn(err) });
+
+        function sendMessage() {
+            connection.invoke("send", $('#message').val()).catch(
+                function (err) { console.warn(err) });
+        }
+ 
+
+</script>
+@section Scripts 
+{
+
+}
+

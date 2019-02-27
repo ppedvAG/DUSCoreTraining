@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.2">
       <PrivateAssets>all</PrivateAssets>
@@ -23,7 +24,6 @@
   <ItemGroup>
     <Folder Include="NewFolder\" />
     <Folder Include="Pages\Modul09\" />
-    <Folder Include="Pages\Modul10\" />
     <Folder Include="Pages\Modul11\" />
     <Folder Include="Pages\Modul12\" />
   </ItemGroup>

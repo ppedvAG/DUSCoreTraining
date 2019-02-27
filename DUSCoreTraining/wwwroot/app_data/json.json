@@ -1,0 +1,9 @@
+{
+  "Auto": [
+    { "Marke": "Bmw" },
+    { "Marke": "VW" },
+    { "Marke": "Audi" },
+    { "Marke": "Ford" },
+    { "Marke": "Porsche" }
+  ]
+}

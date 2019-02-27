@@ -1,0 +1,11 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul07.AutoAuswahlModel
+@{
+    ViewData["Title"] = "AutoAuswahl";
+}
+
+<h1>AutoAuswahl</h1>
+<select asp-for="Auswahl" asp-items="Model.MyItems">
+<option>KFZ...</option>
+</select>
+

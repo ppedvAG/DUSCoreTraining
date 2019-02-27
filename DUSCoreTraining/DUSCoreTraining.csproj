@@ -26,7 +26,6 @@
     <Folder Include="Pages\Modul10\" />
     <Folder Include="Pages\Modul11\" />
     <Folder Include="Pages\Modul12\" />
-    <Folder Include="wwwroot\app_data\" />
   </ItemGroup>
 
 </Project>

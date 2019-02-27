@@ -1,0 +1,16 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul07.AutosNachladenModel
+@{
+    ViewData["Title"] = "AutosNachladen";
+}
+
+<h1>AutosNachladen</h1>
+<a class="btn btn-primary" href="#"
+        onclick="$('#grid1').load('AutosNachladen?handler=LoadAutos');" 
+        >load...</a>
+<div id="grid1">
+
+</div>
+@section scripts{ 
+
+}

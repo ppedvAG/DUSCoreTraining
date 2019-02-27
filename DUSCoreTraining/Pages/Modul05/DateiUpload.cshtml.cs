@@ -18,7 +18,8 @@ namespace DUSCoreTraining.Pages.Modul05
         public void OnPost(IFormFile datei)
         {
             var pfad = @"C:\aspnetcore\training\DUSCoreTraining\DUSCoreTraining\wwwroot\app_data\";
-            pfad = Path.Combine(AppDomain.CurrentDomain.GetData("wwwpath").ToString(), datei.FileName);
+            pfad = Path.Combine(AppDomain.CurrentDomain.GetData("wwwpath").ToString(),
+                Path.GetFileName(datei.FileName));
             using (var fs = new FileStream(pfad,FileMode.Create))
             {
                 datei.CopyTo(fs);

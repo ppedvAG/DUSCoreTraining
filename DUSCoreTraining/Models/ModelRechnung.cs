@@ -13,6 +13,10 @@ namespace DUSCoreTraining.Models
         {
 
         }
+        public ModelRechnung()
+        {
+
+        }
         public virtual DbSet<Rechnung> Rechnungs { get; set; }
         public virtual DbSet<Positionen> Positionens { get; set; }
 

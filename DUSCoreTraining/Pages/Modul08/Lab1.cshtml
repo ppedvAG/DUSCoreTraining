@@ -1,0 +1,28 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul08.Lab1Model
+@{
+    ViewData["Title"] = "Lab1";
+}
+
+<h1>Lab1</h1>
+<div class="row">
+    <div class="col">
+        <div class="list-group">
+            <div class="list-group-item active"><h1>Rechnungen</h1></div>
+           @foreach (var item in Model.Rechnungen)
+           {
+               <a class="list-group-item  list-group-item-action" href="#">
+                   <h2>@item.KopfText</h2>
+                   <p>
+                       <span class="badge badge-secondary">
+                           @item.Positionen.Count()
+                       </span>
+                     Kunde Nummer   @item.KundenID ->€ @item.Summe
+
+                   </p>
+               </a>
+
+           }
+        </div>
+    </div>
+</div>

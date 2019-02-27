@@ -11,7 +11,7 @@ namespace DUSCoreTraining.Models
     {
         public Rechnung()
         {
-            Postionen = new List<Positionen>();
+            Positionen = new List<Positionen>();
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
@@ -19,6 +19,6 @@ namespace DUSCoreTraining.Models
         public string KopfText { get; set; }
         public int KundenID { get; set; }
         public float Summe { get; set; }
-        virtual public IEnumerable<Positionen> Postionen { get; set; }
+        virtual public IEnumerable<Positionen> Positionen { get; set; }
     }
 }

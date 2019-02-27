@@ -1,0 +1,17 @@
+﻿@page
+@model DUSCoreTraining.Pages.Modul08.EditAutoModel
+@{
+    ViewData["Title"] = "EditAuto";
+}
+
+<h1>EditAuto</h1>
+<form method="post">
+    <label asp-for="MyAuto.Jahre"></label>
+    <input asp-for="MyAuto.Jahre" />
+    <span asp-validation-for="MyAuto.Jahre"></span><br />
+    <input asp-for="MyAuto.passwort" class="" />
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+</form>
+
